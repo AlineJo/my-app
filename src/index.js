@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import 'semantic-ui-css/semantic.min.css'
+import { Button } from 'semantic-ui-react'
 
 const MyFirstComponent = (props) => {
 
@@ -27,6 +28,12 @@ const MyThirdComponent = ({ n1, n2 }) => {
   </div>)
 }
 
+const semanticButtonItem = 
+<div>
+<Button primary>Primary</Button>
+<Button secondary>Secondary</Button>
+</div>
+
 
 const element =
   <div>
@@ -44,6 +51,11 @@ const element =
 
 <MyThirdComponent n1={'hello'} n2={'world'}/>
 
+<br/>
+<br/>
+<br/>
+
+{semanticButtonItem}
   </div>
 
 
