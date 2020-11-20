@@ -61,11 +61,10 @@ const element =
 
 
 
-
 ReactDOM.render(
-  /*<React.StrictMode>
+  <React.StrictMode>
     <App />
-  </React.StrictMode>*/element,
+  </React.StrictMode> ,
   document.getElementById('root')
 );
 
