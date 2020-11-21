@@ -1,6 +1,11 @@
 import './App.css';
 import React from 'react'
 import MyAppHeader from './MyComponents/MyAppHeader'
+import MyAppBody from './MyComponents/MyAppBody';
+import { Input, Segment } from 'semantic-ui-react'
+
+//https://www.youtube.com/watch?v=UDb5KH75grQ&list=PLK-0XjrR8o7Ue1rguZAyQvFWIKrlxHZLh&index=7 
+
 
 // create component class to use component state
 
@@ -14,6 +19,12 @@ class App extends React.Component {
     this.state = {
       name: "Yousuf"
     }
+
+    this.onChange = this.onChange.bind(this)
+  }
+
+  onChange(event, data) {
+    this.setState({ name: data.value })
   }
 
 
@@ -21,6 +32,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <MyAppHeader name={this.state.name} />
+        <MyAppBody onChange={this.onChange} />
+
       </div>
     );
   }
